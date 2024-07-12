@@ -6,6 +6,7 @@ from exception import CustomException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
 from components.data_transformation import DataTransformation
+from components.model_trainer import ModelTrainer
 
 
 @dataclass
@@ -54,5 +55,8 @@ if __name__ =="__main__":
 
         data_transformation = DataTransformation()
         train_arr, test_arr,_= data_transformation.inititate_data_transformation(train_data_path,test_data_path)
+
+        modeltrainer = ModelTrainer()
+        print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
         
        

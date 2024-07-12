@@ -51,7 +51,7 @@ class DataTransformation:
 
 
         except Exception as e:
-            raise CustmeException(e, sys)
+            raise CustomException(e, sys)
         
     def remote_outliers_IQR(self, col, df):
         try:
@@ -70,7 +70,7 @@ class DataTransformation:
 
         except Exception as e:
             logging.info("Outluers handling code")
-            raise CustmeException(e, sys)
+            raise CustomException(e, sys)
         
     def inititate_data_transformation(self, train_path, test_path):
 
@@ -126,4 +126,4 @@ class DataTransformation:
 
 
         except Exception as e:
-            raise CustmeException(e, sys)
+            raise CustomException(e, sys)
